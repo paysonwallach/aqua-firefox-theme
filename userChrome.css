@@ -4,7 +4,10 @@
 
 #nav-bar {
   border-top-width: 0px !important;
-  margin-top: -6px !important; /* Blend nav-bar into csd */
+  margin-top: 6px !important;
+  /* Blend nav-bar into csd */
+  margin-left: 76px;
+  margin-right: 4px;
 }
 
 /* Hide tab line */
@@ -68,13 +71,14 @@
  * Change the last padding value to 5px for Windows, Linux, or if
  * you're using the titlebar
  */
+
 #nav-bar {
   height: 38px;
-  padding: 0px 5px 0px 5px !important;
+  padding-bottom: 4px !important;
 }
 
 #TabsToolbar {
-  height: 29px !important;
+  height: 31px !important;
   --tab-separator-image: none !important;
 }
 
@@ -82,9 +86,10 @@
 #nav-bar {
   background-color: transparent !important;
   background-image: linear-gradient(#e2e2e2, transparent) !important;
+  border-bottom: 1px solid black;
 }
 
-#navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
+#navigator-toolbox>toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
   background-color: transparent !important;
   background-image: none;
 }
@@ -94,7 +99,7 @@
   background-image: linear-gradient(#e2e2e2, transparent) !important;
 }
 
-#main-window[lwtheme="true"]:not([style*="defaultthemes"]) #navigator-toolbox > toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
+#main-window[lwtheme="true"]:not([style*="defaultthemes"]) #navigator-toolbox>toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
   background-color: transparent !important;
   background-image: none;
 }
@@ -115,13 +120,8 @@
 }
 
 #urlbar {
-  background: #fafafa !important;
+  background: #fafafa;
   border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-/* Hide Favicons, center text */
-.tabbrowser-tabs .tab-icon-image {
-  display: none !important;
 }
 
 .tabbrowser-tab[pinned]:not([busy="true"]) .tab-icon-image {
@@ -159,21 +159,18 @@
 
 /* Make tab close buttons appear on tab hover, replacing the tab icon */
 .tabbrowser-tab .tab-close-button {
-	-moz-box-ordinal-group: 0 !important;
-	margin: 0px 4px 0px -2px !important;
-}
-
-.tabbrowser-tab .tab-close-button {
-	display: none !important;
+  display: none !important;
+  margin: 0px 4px 0px -2px !important;
+  -moz-box-ordinal-group: 0 !important;
 }
 
 .tabbrowser-tab:not([pinned="true"]):hover .tab-icon-image,
 .tabbrowser-tab:not([pinned="true"]):hover .tab-throbber {
-	display: none;
+  display: none;
 }
 
 .tabbrowser-tab:not([pinned="true"]):hover .tab-close-button {
-	display: -moz-box !important;
+  display: -moz-box !important;
 }
 
 .tabbrowser-tab[fadein]:not([pinned]) {
@@ -190,10 +187,40 @@
 .tabs-newtab-button,
 #new-tab-button,
 #alltabs-button {
+  height: 30px !important;
   border-left: 1px solid #919191;
+  border-bottom: 0px solid #919191;
+  border-top: 1px solid #919191;
 }
 
 .tabbrowser-tab::after,
 .tabbrowser-tab::before {
-   border: none !important;
+  border: none !important;
+}
+
+/* Fix for nightly 65+ moving titlebar buttons into the tab bar */
+#toolbar-menubar[inactive]>#menubar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#toolbar-menubar[inactive] {
+  margin-bottom: -26px;
+}
+
+#TabsToolbar>.titlebar-buttonbox-container {
+  display: none;
+}
+
+.titlebar-buttonbox-container,
+titlebar-buttonbox {
+  margin-top: 10px;
+  margin-left: 8px;
+  z-index: 1;
+}
+
+:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #navigator-toolbox {
+  border: 1px solid var(--gnome-window-border-color) !important;
+  border-radius: 8px 8px 0 0 !important;
+  margin: -1px -1px 0 -1px !important;
 }
