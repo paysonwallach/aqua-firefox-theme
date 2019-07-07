@@ -11,42 +11,14 @@
   height: 31px !important;
 }
 
-/* Colors */
-#main-window[lwtheme="true"]:not([style*="defaultthemes"]) #nav-bar {
-  background-color: transparent !important;
-}
-
-#main-window[lwtheme="true"]:not([style*="defaultthemes"]) #navigator-toolbox>toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
-  background-color: transparent !important;
-  background-image: none;
-}
-
-#navigator-toolbox>toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
-  background-color: transparent !important;
-  background-image: none;
-}
-
 #nav-bar {
   background-color: transparent !important;
   margin-bottom: 2px
 }
 
-#urlbar {
-  background: #fafafa;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-#TabsToolbar {
-  background: #bcbcbc !important;
-}
-
-#TabsToolbar tab {
-  border-left: 0px solid #919191 !important;
-  border-bottom: 1px solid #919191 !important;
-}
-
 #TabsToolbar tab[selected="true"] {
   border-top: 1px solid #919191 !important;
+  border-bottom: 1px solid #919191 !important;
 }
 
 .tab-background[selected="true"] {
@@ -66,7 +38,7 @@
 }
 
 .tabbrowser-tab:hover .tab-close-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .tabs-newtab-button,
