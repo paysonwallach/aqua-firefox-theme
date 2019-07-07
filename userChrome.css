@@ -2,10 +2,111 @@
 @import "tabs-below-toolbar.css";
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
+/* Heights */
+#nav-bar {
+  height: 40px;
+}
+
+#TabsToolbar {
+  height: 31px !important;
+}
+
+/* Colors */
+#main-window[lwtheme="true"]:not([style*="defaultthemes"]) #nav-bar {
+  background-color: transparent !important;
+}
+
+#main-window[lwtheme="true"]:not([style*="defaultthemes"]) #navigator-toolbox>toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
+  background-color: transparent !important;
+  background-image: none;
+}
+
+#navigator-toolbox>toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
+  background-color: transparent !important;
+  background-image: none;
+}
+
+#nav-bar {
+  background-color: transparent !important;
+  margin-bottom: 2px
+}
+
+#urlbar {
+  background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#TabsToolbar {
+  background: #bcbcbc !important;
+}
+
+#TabsToolbar tab {
+  border-left: 0px solid #919191 !important;
+  border-bottom: 1px solid #919191 !important;
+}
+
+#TabsToolbar tab[selected="true"] {
+  border-top: 1px solid #919191 !important;
+}
+
+.tab-background[selected="true"] {
+  background-attachment: none !important;
+  background-color: #e3e4e6 !important;
+  background-image: none !important;
+}
+
+.tabbrowser-tab[pending="true"] {
+  filter: grayscale(85%) !important;
+}
+
+.tabbrowser-tab:hover .tab-close-button {
+  opacity: 1 !important;
+  background-color: rgba(255, 255, 255, 0.5);
+  visibility: visible;
+}
+
+.tabbrowser-tab:hover .tab-close-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tabs-newtab-button,
+#new-tab-button,
+#alltabs-button {
+  height: 30px !important;
+  border-left: 1px solid #919191;
+  border-top: 1px solid #919191;
+}
+
+/* Fix for nightly 65+ moving titlebar buttons into the tab bar */
+#toolbar-menubar[inactive]>#menubar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#toolbar-menubar[inactive] {
+  margin-bottom: -26px;
+}
+
+#TabsToolbar>.titlebar-buttonbox-container {
+  display: none;
+}
+
+.titlebar-buttonbox-container,
+titlebar-buttonbox {
+  margin-top: 12px !important;
+  margin-left: 8px !important;
+  z-index: 1;
+}
+
+:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #navigator-toolbox {
+  border: 1px solid var(--gnome-window-border-color) !important;
+  border-radius: 8px 8px 0 0 !important;
+  margin: -1px -1px 0 -1px !important;
+}
+
 #nav-bar {
   border-top-width: 0px !important;
   margin-top: 6px !important;
-  /* Blend nav-bar into csd */
   margin-left: 76px;
   margin-right: 4px;
 }
@@ -17,6 +118,10 @@
 
 .titlebar-placeholder {
   display: none;
+}
+
+.tabbrowser-tab[pinned]:not([busy="true"]) .tab-icon-image {
+  display: block !important;
 }
 
 /* Bookmarks Bar fix */
@@ -35,10 +140,8 @@
   border-bottom: 1px solid #b1b1b1 !important;
 }
 
-/* Full-width tabs */
 #TabsToolbar .tabbrowser-tab[fadein]:not([pinned]) {
   min-width: 6em !important;
-  max-width: 100% !important;
 }
 
 #TabsToolbar {
@@ -51,113 +154,6 @@
 }
 
 /* Hide and show close tab button */
-#TabsToolbar .tab-close-button {
-  -moz-box-ordinal-group: 0 !important;
-  -moz-margin-start: -4px !important;
-  -moz-margin-end: 4px !important;
-  border-radius: 2px !important;
-  transition: opacity 200ms !important;
-  list-style-image: url('data:image/svg+xml;utf8,\<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">\<line x1="4.5" y1="4.5" x2="11.5" y2="11.5" stroke="rgb(84,82,84)" stroke-width="1"/>\<line x1="4.5" y1="11.5" x2="11.5" y2="4.5" stroke="rgb(84,82,84)" stroke-width="1"/>\</svg>') !important;
-}
-
-@media (max-resolution: 1.9dppx) {
-  #TabsToolbar .tab-close-button {
-    list-style-image: url('data:image/svg+xml;utf8,\<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">\<line x1="4.5" y1="4.5" x2="11.5" y2="11.5" stroke="rgb(84,82,84)" stroke-width="1.5"/>\<line x1="4.5" y1="11.5" x2="11.5" y2="4.5" stroke="rgb(84,82,84)" stroke-width="1.5"/>\</svg>') !important;
-  }
-}
-
-/* Heights
- *
- * Change the last padding value to 5px for Windows, Linux, or if
- * you're using the titlebar
- */
-
-#nav-bar {
-  height: 38px;
-  padding-bottom: 4px !important;
-}
-
-#TabsToolbar {
-  height: 31px !important;
-  --tab-separator-image: none !important;
-}
-
-/* Colors */
-#nav-bar {
-  background-color: transparent !important;
-  background-image: linear-gradient(#e2e2e2, transparent) !important;
-  border-bottom: 1px solid black;
-}
-
-#navigator-toolbox>toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
-  background-color: transparent !important;
-  background-image: none;
-}
-
-#main-window[lwtheme="true"]:not([style*="defaultthemes"]) #nav-bar {
-  background-color: transparent !important;
-  background-image: linear-gradient(#e2e2e2, transparent) !important;
-}
-
-#main-window[lwtheme="true"]:not([style*="defaultthemes"]) #navigator-toolbox>toolbar:not(#toolbar-menubar):not(#TabsToolbar):not(#nav-bar) {
-  background-color: transparent !important;
-  background-image: none;
-}
-
-#TabsToolbar {
-  background: #bcbcbc !important;
-}
-
-#TabsToolbar tab {
-  border-left: 1px solid #919191 !important;
-  border-bottom: 1px solid #919191 !important;
-}
-
-.tab-background[selected="true"] {
-  background-attachment: none !important;
-  background-color: rgb(220, 220, 220) !important;
-  background-image: none !important;
-}
-
-#urlbar {
-  background: #fafafa;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-}
-
-.tabbrowser-tab[pinned]:not([busy="true"]) .tab-icon-image {
-  display: block !important;
-}
-
-.tab-label {
-  -moz-box-flex: 1 !important;
-  text-align: center !important;
-}
-
-/* Hide scroll buttons */
-.scrollbutton-down,
-.scrollbutton-up {
-  display: none;
-}
-
-.tabbrowser-tab[pending="true"] {
-  filter: grayscale(85%) !important;
-}
-
-.tabbrowser-tab:hover .tab-close-button {
-  opacity: 1 !important;
-  background-color: rgba(255, 255, 255, 0.5);
-  visibility: visible;
-}
-
-.tabbrowser-tab:hover .tab-close-button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-#TabsToolbar .tab-icon-image:not([pinned]) {
-  margin-left: 0px;
-}
-
-/* Make tab close buttons appear on tab hover, replacing the tab icon */
 .tabbrowser-tab .tab-close-button {
   display: none !important;
   margin: 0px 4px 0px -2px !important;
@@ -184,43 +180,28 @@
   --toolbarbutton-outer-padding: 0;
 }
 
-.tabs-newtab-button,
-#new-tab-button,
-#alltabs-button {
-  height: 30px !important;
-  border-left: 1px solid #919191;
-  border-bottom: 0px solid #919191;
-  border-top: 1px solid #919191;
+#TabsToolbar .tab-close-button {
+  -moz-box-ordinal-group: 0 !important;
+  -moz-margin-start: -4px !important;
+  -moz-margin-end: 4px !important;
+  border-radius: 2px !important;
+  transition: opacity 200ms !important;
+  list-style-image: url('data:image/svg+xml;utf8,\<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">\<line x1="4.5" y1="4.5" x2="11.5" y2="11.5" stroke="rgb(84,82,84)" stroke-width="1"/>\<line x1="4.5" y1="11.5" x2="11.5" y2="4.5" stroke="rgb(84,82,84)" stroke-width="1"/>\</svg>') !important;
 }
 
-.tabbrowser-tab::after,
-.tabbrowser-tab::before {
-  border: none !important;
+@media (max-resolution: 1.9dppx) {
+  #TabsToolbar .tab-close-button {
+    list-style-image: url('data:image/svg+xml;utf8,\<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">\<line x1="4.5" y1="4.5" x2="11.5" y2="11.5" stroke="rgb(84,82,84)" stroke-width="1.5"/>\<line x1="4.5" y1="11.5" x2="11.5" y2="4.5" stroke="rgb(84,82,84)" stroke-width="1.5"/>\</svg>') !important;
+  }
 }
 
-/* Fix for nightly 65+ moving titlebar buttons into the tab bar */
-#toolbar-menubar[inactive]>#menubar-items {
-  opacity: 0;
-  pointer-events: none;
+.tab-label {
+  -moz-box-flex: 1 !important;
+  text-align: center !important;
 }
 
-#toolbar-menubar[inactive] {
-  margin-bottom: -26px;
-}
-
-#TabsToolbar>.titlebar-buttonbox-container {
+/* Hide scroll buttons */
+.scrollbutton-down,
+.scrollbutton-up {
   display: none;
-}
-
-.titlebar-buttonbox-container,
-titlebar-buttonbox {
-  margin-top: 10px;
-  margin-left: 8px;
-  z-index: 1;
-}
-
-:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #navigator-toolbox {
-  border: 1px solid var(--gnome-window-border-color) !important;
-  border-radius: 8px 8px 0 0 !important;
-  margin: -1px -1px 0 -1px !important;
 }
