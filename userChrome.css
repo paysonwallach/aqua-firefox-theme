@@ -8,7 +8,7 @@
 }
 
 #TabsToolbar {
-  height: 31px !important;
+  height: 30px !important;
 }
 
 #nav-bar {
@@ -17,8 +17,9 @@
 }
 
 #TabsToolbar tab[selected="true"] {
-  border-top: 1px solid #919191 !important;
-  border-bottom: 1px solid #919191 !important;
+  height: 28px !important;
+  border-top: 1px solid var(--tabs-border-color) !important;
+  border-bottom: 1px solid var(--tabs-border-color) !important;
 }
 
 .tab-background[selected="true"] {
@@ -44,9 +45,10 @@
 .tabs-newtab-button,
 #new-tab-button,
 #alltabs-button {
-  height: 30px !important;
-  border-left: 1px solid #919191;
-  border-top: 1px solid #919191;
+  width: 29px !important;
+  height: 29px;
+  border-left: 1px solid var(--tabs-border-color);
+  border-top: 1px solid var(--tabs-border-color);
   margin-left: -1px !important;
 }
 
@@ -98,11 +100,15 @@ titlebar-buttonbox {
   display: block !important;
 }
 
+#navigator-toolbox {
+  border-bottom: 0px !important;
+}
+
 /* Bookmarks Bar fix */
 #PersonalToolbar {
   -moz-box-ordinal-group: 2;
   background: rgb(220, 220, 220) !important;
-  border-bottom: 1px solid #b1b1b1 !important;
+  border-bottom: 1px solid var(--tabs-border-color) !important;
 }
 
 /* Remove extra tab bar space */
@@ -111,7 +117,7 @@ titlebar-buttonbox {
 }
 
 #TabsToolbar .tabbrowser-tabs {
-  border-bottom: 1px solid #b1b1b1 !important;
+  border-bottom: 1px solid var(--tabs-border-color) !important;
 }
 
 #TabsToolbar .tabbrowser-tab[fadein]:not([pinned]) {
