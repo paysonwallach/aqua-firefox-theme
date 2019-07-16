@@ -99,3 +99,6 @@
 	}
 
 })();
+
+// Enable CSD
+user_pref("browser.tabs.drawInTitlebar", true);

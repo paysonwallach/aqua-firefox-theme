@@ -1,187 +1,24 @@
-@import "findbar.css";
-@import "tabs-below-toolbar.css";
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* Import theme */
+@import "theme/gnome-theme.css";
 
-/* Heights */
-#nav-bar {
-  height: 40px;
-}
+/**
+ * Here you can enable other theme features not included by default.
+ * To enable a specific feature, uncomment its @import line by removing "/*" at
+ * the beginning of the line. To disable it, put the "/*" back.
+ */
 
-#TabsToolbar {
-  height: 30px !important;
-}
+/**
+ * Hide the tab bar when only one tab is open
+ * You should move the new tab button somewhere else for this to work, because by
+ * default it is on the tab bar too.
+ */
+/*@import "theme/hide-single-tab.css"; /**/
 
-#nav-bar {
-  background-color: transparent !important;
-  margin-bottom: 2px
-}
+/* Limit the URL bar's autocompletion popup's width to the URL bar's width */
+/*@import "theme/matching-autocomplete-width.css"; /**/
 
-#TabsToolbar tab[selected="true"] {
-  height: 28px !important;
-  border-top: 1px solid var(--tabs-border-color) !important;
-  border-bottom: 1px solid var(--tabs-border-color) !important;
-}
+/* Use GNOME stack icons */
+@import "theme/gnome-icons.css";
 
-.tab-background[selected="true"] {
-  background-attachment: none !important;
-  background-color: #e3e4e6 !important;
-  background-image: none !important;
-}
-
-.tabbrowser-tab[pending="true"] {
-  filter: grayscale(85%) !important;
-}
-
-.tabbrowser-tab:hover .tab-close-button {
-  opacity: 1 !important;
-  background-color: rgba(255, 255, 255, 0.5);
-  visibility: visible;
-}
-
-.tabbrowser-tab:hover .tab-close-button:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
-.tabs-newtab-button,
-#new-tab-button,
-#alltabs-button {
-  width: 29px !important;
-  height: 29px;
-  border-left: 1px solid var(--tabs-border-color);
-  border-top: 1px solid var(--tabs-border-color);
-  margin-left: -1px !important;
-}
-
-
-/* Fix for nightly 65+ moving titlebar buttons into the tab bar */
-#toolbar-menubar[inactive]>#menubar-items {
-  opacity: 0;
-  pointer-events: none;
-}
-
-#toolbar-menubar[inactive] {
-  margin-bottom: -26px;
-}
-
-#TabsToolbar>.titlebar-buttonbox-container {
-  display: none;
-}
-
-.titlebar-buttonbox-container,
-titlebar-buttonbox {
-  margin-top: 14px !important;
-  margin-left: 8px !important;
-  z-index: 1;
-}
-
-:root[tabsintitlebar]:not([sizemode="maximized"]):not([inFullscreen]) #navigator-toolbox {
-  border: 1px solid var(--gnome-window-border-color) !important;
-  border-radius: 8px 8px 0 0 !important;
-  margin: -1px -1px 0 -1px !important;
-}
-
-#nav-bar {
-  border-top-width: 0px !important;
-  margin-top: 6px !important;
-  margin-left: 76px;
-  margin-right: 4px;
-}
-
-/* Hide tab line */
-.tab-line {
-  display: none !important;
-}
-
-.titlebar-placeholder {
-  display: none;
-}
-
-.tabbrowser-tab[pinned]:not([busy="true"]) .tab-icon-image {
-  display: block !important;
-}
-
-#navigator-toolbox {
-  border-bottom: 0px !important;
-}
-
-/* Bookmarks Bar fix */
-#PersonalToolbar {
-  -moz-box-ordinal-group: 2;
-  background: rgb(220, 220, 220) !important;
-  border-bottom: 1px solid var(--tabs-border-color) !important;
-}
-
-/* Remove extra tab bar space */
-#TabsToolbar {
-  padding-inline-start: 0px !important;
-}
-
-#TabsToolbar .tabbrowser-tabs {
-  border-bottom: 1px solid var(--tabs-border-color) !important;
-}
-
-#TabsToolbar .tabbrowser-tab[fadein]:not([pinned]) {
-  min-width: 6em !important;
-}
-
-#TabsToolbar {
-  background: linear-gradient(to bottom,
-    rgb(192, 190, 192),
-    rgb(187, 185, 187)) !important;
-  box-shadow: inset 0px 1px 0px 0px rgb(162, 160, 162),
-    inset 0px -1px 0px 0px rgb(162, 160, 162) !important;
-  margin-right: -1px !important;
-}
-
-/* Hide and show close tab button */
-.tabbrowser-tab .tab-close-button {
-  display: none !important;
-  margin: 0px 4px 0px -2px !important;
-  -moz-box-ordinal-group: 0 !important;
-}
-
-.tabbrowser-tab:not([pinned="true"]):hover .tab-icon-image,
-.tabbrowser-tab:not([pinned="true"]):hover .tab-throbber {
-  display: none;
-}
-
-.tabbrowser-tab:not([pinned="true"]):hover .tab-close-button {
-  display: -moz-box !important;
-}
-
-.tabbrowser-tab[fadein]:not([pinned]) {
-  max-width: 100% !important;
-}
-
-:root .tabs-newtab-button,
-:root #new-tab-button,
-:root #alltabs-button {
-  --toolbarbutton-border-radius: 0;
-  --toolbarbutton-outer-padding: 0;
-}
-
-#TabsToolbar .tab-close-button {
-  -moz-box-ordinal-group: 0 !important;
-  -moz-margin-start: -4px !important;
-  -moz-margin-end: 4px !important;
-  border-radius: 2px !important;
-  transition: opacity 200ms !important;
-  list-style-image: url('data:image/svg+xml;utf8,\<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">\<line x1="4.5" y1="4.5" x2="11.5" y2="11.5" stroke="rgb(84,82,84)" stroke-width="1"/>\<line x1="4.5" y1="11.5" x2="11.5" y2="4.5" stroke="rgb(84,82,84)" stroke-width="1"/>\</svg>') !important;
-}
-
-@media (max-resolution: 1.9dppx) {
-  #TabsToolbar .tab-close-button {
-    list-style-image: url('data:image/svg+xml;utf8,\<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">\<line x1="4.5" y1="4.5" x2="11.5" y2="11.5" stroke="rgb(84,82,84)" stroke-width="1.5"/>\<line x1="4.5" y1="11.5" x2="11.5" y2="4.5" stroke="rgb(84,82,84)" stroke-width="1.5"/>\</svg>') !important;
-  }
-}
-
-.tab-label {
-  -moz-box-flex: 1 !important;
-  text-align: center !important;
-}
-
-/* Hide scroll buttons */
-.scrollbutton-down,
-.scrollbutton-up {
-  display: none;
-}
+/* Make all tab icons look kinda like symbolic icons */
+/*@import "theme/symbolic-tab-icons.css"; /**/
