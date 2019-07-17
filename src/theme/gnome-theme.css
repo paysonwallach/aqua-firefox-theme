@@ -1,16 +1,16 @@
-@import "parts/toolbox.css";
-@import "parts/buttons.css";
-@import "parts/entries.css";
-@import "parts/headerbar.css";
-@import "parts/csd.css";
-@import "parts/popups.css";
-@import "parts/tabs-bar.css";
-@import "parts/findbar.css";
-@import "parts/remove-white-flash.css";
-@import "parts/custom-icons.css";
-@import "parts/scrollbars.css";
-@import "colors/light.css";
-@import "colors/dark.css";
+@import "components/toolbox.css";
+@import "components/buttons.css";
+@import "components/entries.css";
+@import "components/headerbar.css";
+@import "components/csd.css";
+@import "components/popups.css";
+@import "components/tabs-bar.css";
+@import "components/findbar.css";
+@import "components/remove-white-flash.css";
+@import "components/custom-icons.css";
+@import "components/scrollbars.css";
+@import "variants/light.css";
+@import "variants/dark.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 :root {

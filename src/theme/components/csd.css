@@ -21,7 +21,7 @@
 :root[tabsintitlebar] #titlebar-buttonbox-container,
 :root[tabsintitlebar][inFullscreen] #window-controls {
   -moz-appearance: none !important;
-  padding: 0 8px;
+  padding: 0 9px;
   position: absolute !important;
   left: 0;
   top: 0;
@@ -35,11 +35,10 @@
 
 /* Left window buttons */
 :root[tabsintitlebar]:not([inFullscreen]) #nav-bar {
-  padding-left: 76px !important;
-  padding-right: 3px !important;
+  padding-left: 78px !important;
 }
 
-/* Remove tab toolbar titlebar blank spaces */
+/* Remove tabs-bar titlebar blank spaces */
 :root[tabsintitlebar] #TabsToolbar .titlebar-placeholder {
   display: none !important;
 }
@@ -82,7 +81,7 @@
 :root[tabsintitlebar] #titlebar-content {
   display: block !important;
   position: absolute;
-  height: 28px !important;
+  height: 30px !important;
   top: 0 !important;
 }
 

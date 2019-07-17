@@ -9,8 +9,8 @@
 }
 
 tab>stack {
-  height: 32px !important;
-  min-height: 32px !important;
+  height: 30px !important;
+  min-height: 30px !important;
 }
 
 #TabsToolbar .toolbar-items {
@@ -69,7 +69,7 @@ tab[selected]:-moz-window-inactive {
   min-width: 0 !important;
 }
 
-/* Put tab close button and icon sound to the right */
+/* Put tab close button and icon sound to the left */
 .tab-icon-sound[soundplaying="true"],
 .tab-icon-sound[muted="true"],
 .tab-icon-sound[activemedia-blocked="true"] {
@@ -104,6 +104,7 @@ tab[selected]:-moz-window-inactive {
 }
 
 /* If tab close button is not present, don't force favicon to the center */
+/*
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber,
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber-fallback,
 #tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([busy]) .tab-icon-image,
@@ -121,7 +122,7 @@ tab[selected]:-moz-window-inactive {
   border: 1px solid transparent;
   box-sizing: content-box;
   /* Avoid deformation on flexbox */
-  border-radius: 5px;
+  border-radius: 3px;
   list-style-image: var(--gnome-tabbar-tab-close-icon) !important;
   height: 16px;
   opacity: .3;
@@ -204,7 +205,7 @@ tab[selected]:-moz-window-inactive {
 :root:not(:-moz-window-inactive) .tabbrowser-tab:hover>.tab-stack>.tab-background:not([selected=true]) {
   background-color: var(--gnome-tabbar-tab-hover-background) !important;
   border-image: none !important;
-  border-bottom: 3px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
+  border-bottom: 1px solid var(--gnome-tabbar-tab-hover-border-bottom-color) !important;
 }
 
 /* Full width tabs */
@@ -257,9 +258,11 @@ tab[selected]:-moz-window-inactive {
   }
 }
 
-:root .tabs-newtab-button,
-:root #new-tab-button,
-:root #alltabs-button {
+:root .toolbarbutton-1 {
   --toolbarbutton-border-radius: 0;
   --toolbarbutton-outer-padding: 0;
+}
+
+.toolbarbutton-1:hover {
+  background-color: var(--gnome-tabbar-tab-hover-background);
 }

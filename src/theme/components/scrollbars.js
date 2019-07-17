@@ -5,8 +5,6 @@
 
     /* Colours - can't be read from chrome CSS. Setting on :root doesn't work. */
     :not(select):not(hbox) > scrollbar {
-        --gnome-scrollbars-hover-bgcolor: rgba(192, 192, 192, 0.75);
-        --gnome-scrollbars-hover-border-color: rgba(192, 192, 192, 0.75);
         --gnome-scrollbars-thumb-bgcolor: rgba(0, 0, 0, 0.32);
         --gnome-scrollbars-thumb-blend-mode: multiply;
         --gnome-scrollbars-thumb-outline: 1px solid rgba(255, 255, 255, 0.4);
@@ -15,8 +13,6 @@
     }
     @media (prefers-color-scheme: dark) {
         :not(select):not(hbox) > scrollbar {
-            --gnome-scrollbars-hover-bgcolor: rgba(29, 30, 31, 0.75);
-            --gnome-scrollbars-hover-border-color: rgba(13, 17, 18, 0.75);
             --gnome-scrollbars-thumb-bgcolor: rgba(252, 254, 251, 0.58);
             --gnome-scrollbars-thumb-blend-mode: screen;
             --gnome-scrollbars-thumb-outline: 1px solid rgba(0, 0, 0, 0.4);
@@ -32,6 +28,7 @@
         box-sizing: border-box !important;
         background-color: transparent;
         background-image: none;
+        border: none;
         z-index: 1;
         pointer-events: auto;
         width: auto !important;
@@ -91,8 +88,8 @@
     }
     /* Hovered scrollbar */
     :not(select):not(hbox) > scrollbar:hover {
-        background-color: var(--gnome-scrollbars-hover-bgcolor);
-        border-color: var(--gnome-scrollbars-hover-border-color);
+        background-color: transparent !important;
+        border-color: transparent !important;
     }
     :not(select):not(hbox) > scrollbar:hover thumb {
         outline-width: 0;
