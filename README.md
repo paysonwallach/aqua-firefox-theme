@@ -1,3 +1,3 @@
-# Firefox CSS
+# Aqua Firefox Theme
 
-![screenshot](https://raw.githubusercontent.com/paysonwallach/firefox-css/master/screenshots/firefox.png)
+![screenshot](https://raw.githubusercontent.com/paysonwallach/aqua-firefox-theme/master/screenshots/firefox.png)
