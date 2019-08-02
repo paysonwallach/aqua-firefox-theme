@@ -24,7 +24,7 @@
   padding: 0 9px;
   position: absolute !important;
   left: 0;
-  top: 0;
+  top: -2px;
 }
 
 /* Remove close and minimize buttons from fullscreen buttons */
@@ -81,7 +81,7 @@
 :root[tabsintitlebar] #titlebar-content {
   display: block !important;
   position: absolute;
-  height: 30px !important;
+  height: 28px !important;
   top: 0 !important;
 }
 
