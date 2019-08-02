@@ -9,12 +9,8 @@
 }
 
 tab>stack {
-  height: 30px !important;
-  min-height: 30px !important;
-}
-
-#TabsToolbar .toolbar-items {
-  margin-bottom: -1px !important;
+  height: 28px !important;
+  min-height: 28px !important;
 }
 
 /* Remove shadow next to tab scroll buttons */
