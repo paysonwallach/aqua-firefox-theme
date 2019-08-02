@@ -62,6 +62,7 @@ tab[selected]:-moz-window-inactive {
 
 /* Adjust tab label width */
 .tab-label-container {
+  margin: auto;
   min-width: 0 !important;
 }
 
@@ -80,14 +81,15 @@ tab[selected]:-moz-window-inactive {
   margin-left: 6px;
 }
 
-/* Force tab favicon to the center */
+/* Force throbber to the center */
 .tab-throbber,
 .tab-throbber-fallback {
   margin-left: auto;
 }
 
-.tabbrowser-tab:not([busy]) .tab-icon-image {
-  margin-left: auto;
+/* Hide tab icons unless pinned */
+.tabbrowser-tab:not([pinned]) .tab-icon-image {
+  display: none;
 }
 
 /* If tab favicon is not present, force tab label to the center */
@@ -99,20 +101,12 @@ tab[selected]:-moz-window-inactive {
   margin-left: auto !important;
 }
 
-/* If tab close button is not present, don't force favicon to the center */
-/*
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber,
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]) .tab-throbber-fallback,
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([busy]) .tab-icon-image,
-#tabbrowser-tabs[closebuttons="activetab"] .tabbrowser-tab:not([selected="true"]):not([image]) .tab-label-container {
-  margin-left: 0 !important;
+.tabbrowser-tab:hover,
+.tabbrowser-tab[selected] {
+  margin-bottom: -1px !important;
 }
 
 /* Close tab button */
-:root {
-  --gnome-fill-icon: red !important;
-}
-
 .tab-close-button {
   -moz-appearance: none !important;
   border: 1px solid transparent;
@@ -223,7 +217,7 @@ tab[selected]:-moz-window-inactive {
 /* Hide and show close tab button */
 .tabbrowser-tab .tab-close-button {
   display: none !important;
-  margin: 0px 4px 0px -2px !important;
+  margin: 0px 4px !important;
   -moz-box-ordinal-group: 0 !important;
 }
 
