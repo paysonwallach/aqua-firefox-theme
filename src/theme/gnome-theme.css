@@ -9,8 +9,10 @@
 @import "components/remove-white-flash.css";
 @import "components/custom-icons.css";
 @import "components/scrollbars.css";
+
 @import "variants/light.css";
 @import "variants/dark.css";
+
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 :root {
