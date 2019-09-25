@@ -125,6 +125,11 @@ panelview vbox.panel-subview-body>toolbarbutton label {
   margin-bottom: -5px !important;
 }
 
+#overflowMenu-customize-button {
+  margin: 4px !important;
+  margin-top: 0 !important
+}
+
 /* Confirmation Hint */
 #confirmation-hint .panel-arrowcontent {
   background: var(--gnome-button-suggested-action-background) !important;
