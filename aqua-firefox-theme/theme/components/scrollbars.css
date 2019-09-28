@@ -1,0 +1,15 @@
+/*
+ * aqua-firefox-theme
+ * scrollbars.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+toolbarbutton#alltabs-button {
+  -moz-binding: url("scrollbars.xml#js");
+}

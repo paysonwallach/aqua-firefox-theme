@@ -1,0 +1,35 @@
+/*
+ * aqua-firefox-theme
+ * userChrome.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@import "theme/aqua-theme.css";
+
+/**
+ * Here you can enable other theme features not included by default.
+ * To enable a specific feature, uncomment its @import line by removing "/*" at
+ * the beginning of the line. To disable it, put the "/*" back.
+ */
+
+/**
+ * Hide the tab bar when only one tab is open
+ * You should move the new tab button somewhere else for this to work, because by
+ * default it is on the tab bar too.
+ */
+/*@import "theme/hide-single-tab.css"; /**/
+
+/* Limit the URL bar's autocompletion popup's width to the URL bar's width */
+@import "theme/matching-autocomplete-width.css";
+/**/
+
+/* Use GNOME stack icons */
+@import "theme/gnome-icons.css";
+/**/
+
+/* Make all tab icons look kinda like symbolic icons */
+/*@import "theme/symbolic-tab-icons.css"; /**/

@@ -1,0 +1,44 @@
+/*
+ * aqua-firefox-theme
+ * omnibar.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* center the omnibar */
+toolbarspring {
+  max-width: 10000px !important;
+}
+
+/* urlbar and searchbar */
+
+#urlbar[focused] .urlbar-textbox-container {
+  margin: -1px !important;
+}
+
+#searchbar>.searchbar-textbox[focused] .searchbar-search-button {
+  margin-left: -1px !important;
+}
+
+#searchbar>.searchbar-textbox[focused] .search-go-button {
+  margin-right: -1px !important;
+}
+
+/* urlbar and searchbar icons */
+.urlbar-icon:hover,
+.urlbar-icon-wrapper:hover,
+.urlbar-icon[open],
+.urlbar-icon-wrapper[open],
+.urlbar-icon:hover:active,
+.urlbar-icon-wrapper:hover:active,
+.searchbar-search-button:hover .searchbar-search-icon,
+.searchbar-search-button[open] .searchbar-search-icon,
+.searchbar-search-button:hover:active .searchbar-search-icon {
+  background-color: transparent !important;
+  fill-opacity: 1 !important;
+}

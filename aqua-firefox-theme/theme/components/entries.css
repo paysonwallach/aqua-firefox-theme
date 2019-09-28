@@ -1,0 +1,81 @@
+/*
+ * aqua-firefox-theme
+ * entries.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* entries */
+#urlbar,
+#searchbar,
+#search-box,
+.findbar-textbox {
+  -moz-appearance: none !important;
+  background: var(--aqua-urlbar-background) !important;
+  border: 1px solid var(--aqua-urlbar-border-color) !important;
+  border-radius: 5px !important;
+  box-shadow: var(--aqua-urlbar-box-shadow) !important;
+  color: var(--aqua-urlbar-color) !important;
+  height: 28px !important;
+  max-height: 28px !important;
+  margin: 0 !important;
+  padding: 6px 8px !important;
+  box-sizing: border-box;
+}
+
+/* entries focused */
+#urlbar[focused],
+#searchbar:focus-within,
+#search-box[focused],
+.findbar-textbox[focused],
+.findbar-textbox:focus {
+  outline: 2px solid var(--aqua-focused-urlbar-border-color) !important;
+  outline-offset: -2px;
+  -moz-outline-radius: 5px;
+}
+
+/* inactive window entries */
+#urlbar:-moz-window-inactive,
+#searchbar:-moz-window-inactive,
+#search-box:-moz-window-inactive,
+.findbar-textbox:-moz-window-inactive {
+  background: var(--aqua-inactive-urlbar-background) !important;
+  border-color: var(--aqua-inactive-urlbar-border-color) !important;
+  box-shadow: var(--aqua-inactive-urlbar-box-shadow) !important;
+  color: var(--aqua-inactive-urlbar-color) !important;
+}
+
+/* entries combined */
+.findbar-textbox {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right-width: 0 !important;
+}
+
+.findbar-textbox[focused],
+.findbar-textbox:focus {
+  -moz-outline-radius: 5px 0 0 5px !important;
+}
+
+/* entries fixes */
+#urlbar,
+#searchbar {
+  margin: 0 3px !important;
+  padding: 0 !important;
+}
+
+.searchbar-textbox {
+  border: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  min-height: auto !important;
+}
+
+#searchbar>.searchbar-textbox[focused] .searchbar-search-button:not(#hack) {
+  margin: 0 !important;
+}

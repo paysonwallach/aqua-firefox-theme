@@ -20,7 +20,7 @@
 
 ## Installation
 
-[Locate your profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data), clone this repository, and move `src` to `<path to your profile directory>/chrome`.
+[Locate your profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data), clone this repository, and move the contents of `aqua-firefox-theme` to `<path to your profile directory>/chrome`.
 
 ## Contributing
 

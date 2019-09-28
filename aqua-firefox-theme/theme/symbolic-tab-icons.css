@@ -1,0 +1,16 @@
+/*
+ * aqua-firefox-theme
+ * symbolic-tab-icons.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* make tab icons resemble symbolic icons */
+tab .tab-icon-image {
+  filter: var(--aqua-convert-icon-to-symbolic-hack-filter);
+}

@@ -1,0 +1,145 @@
+/*
+ * aqua-firefox-theme
+ * gnome-icons.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* menu button */
+#PanelUI-menu-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/open-menu-symbolic?size=dialog") !important;
+}
+
+/* home button */
+#home-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/user-home-symbolic?size=dialog") !important;
+}
+
+/* preferences button */
+#preferences-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/preferences-system-symbolic?size=dialog") !important;
+}
+
+/* fullscreen button */
+#fullscreen-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/view-fullscreen-symbolic?size=dialog") !important;
+}
+
+/* zoom-out button */
+#zoom-out-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/zoom-out-symbolic?size=dialog") !important;
+}
+
+/* zoom-in button */
+#zoom-in-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/zoom-in-symbolic?size=dialog") !important;
+}
+
+/* developer button */
+#developer-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/applications-engineering-symbolic?size=dialog") !important;
+}
+
+/* email link button */
+#email-link-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/mail-unread-symbolic?size=dialog") !important;
+}
+
+/* print button */
+#print-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/printer-symbolic?size=dialog") !important;
+}
+
+/* addons button */
+#add-ons-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/application-x-addon-symbolic?size=dialog") !important;
+}
+
+/* find button */
+#find-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/edit-find-symbolic?size=dialog") !important;
+}
+
+/* new-window button */
+#new-window-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/window-new-symbolic?size=dialog?size=dialog") !important;
+}
+
+/* history button */
+#history-panelmenu .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/preferences-system-time-symbolic?size=dialog") !important;
+}
+
+/* cut button */
+#cut-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/edit-cut-symbolic?size=dialog") !important;
+}
+
+/* copy button */
+#copy-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/edit-copy-symbolic?size=dialog") !important;
+}
+
+/* paste button */
+#paste-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/edit-paste-symbolic?size=dialog") !important;
+}
+
+/* navbar overflow button */
+#nav-bar-overflow-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/view-more-symbolic?size=dialog") !important;
+}
+
+/* main menu buttons icons */
+
+#appMenu-zoomReduce-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/zoom-out-symbolic?size=dialog") !important;
+}
+
+#appMenu-zoomEnlarge-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/zoom-in-symbolic?size=dialog") !important;
+}
+
+#appMenu-fullscreen-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/view-fullscreen-symbolic?size=dialog") !important;
+}
+
+#appMenu-cut-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/edit-cut-symbolic?size=dialog") !important;
+}
+
+#appMenu-copy-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/edit-copy-symbolic?size=dialog") !important;
+}
+
+#appMenu-paste-button .toolbarbutton-icon {
+  filter: var(--aqua-icons-hack-filter);
+  list-style-image: url("moz-icon://stock/edit-paste-symbolic?size=dialog") !important;
+}

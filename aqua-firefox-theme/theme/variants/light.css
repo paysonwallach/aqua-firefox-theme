@@ -1,0 +1,129 @@
+/*
+ * aqua-firefox-theme
+ * light.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/*
+ * Variables prepended with `aqua` are unique to the theme and are assigned
+ * to elements elsewhere. All other variables are defined by Firefox, and thus
+ * must be overridden with `!important` to be changed.
+ */
+
+:root {
+  /* browser area before a page starts loading */
+  --aqua-browser-before-load-background: #d6d6d6;
+
+  /* toolbars */
+  --aqua-toolbar-background: #e5e5e5;
+  --aqua-tabstoolbar-background: #cccccc;
+  --aqua-findbar-background: #f5f5f5;
+  --aqua-toolbar-color: rgb(46, 52, 54);
+  --aqua-toolbar-border-color: #b6b6b3;
+  --aqua-inactive-toolbar-background: #f6f5f4;
+  --aqua-inactive-toolbar-border-color: #c0c0bd;
+
+  /* sidebar */
+  --aqua-sidebar-background: #fbfafa;
+  --aqua-inactive-sidebar-background: #f9f9f8;
+
+  /* popups */
+  --aqua-menu-background: #ffffff;
+  --aqua-menu-border-color: #cdc7c2;
+  --aqua-popover-background: #ffffff;
+  --aqua-popover-border-color: #cdc7c2;
+  --aqua-popover-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --aqua-popover-button-hover-background: rgba(0, 0, 0, 0.1);
+  --aqua-popover-button-active-background: rgba(0, 0, 0, 0.2);
+  --aqua-popover-separator-color: rgba(0, 0, 0, 0.1);
+
+  /* header bar */
+  --aqua-headerbar-background: linear-gradient(to top, #d2d2d2 0%, #e2e2e2 50%, #e9e9e9 98%, #f5f5f5 100%);
+  --aqua-headerbar-border-color: #bdb7b0;
+  --aqua-headerbar-box-shadow: 0 1px rgba(255, 255, 255, 0.65) inset;
+  --aqua-inactive-headerbar-background: linear-gradient(#f6f5f4, #f6f5f4);
+  --aqua-inactive-headerbar-border-color: #c0c0bd;
+  --aqua-inactive-headerbar-box-shadow: 0 1px #fff inset;
+
+  /* buttons */
+  --aqua-button-background: linear-gradient(to top, #f1f1f1 0%, #fdfdfd 95%, #fefefe 100%);
+  --aqua-button-border-color: #cdc7c2;
+  --aqua-button-border-accent-color: #bfb8b1;
+  --aqua-headerbar-button-border-color: #cdc7c2;
+  --aqua-headerbar-button-border-accent-color: #bfb8b1;
+  --aqua-button-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.03);
+  --aqua-button-hover-color: rgba(0, 0, 0, 0.1);
+  --aqua-button-active-color: rgba(0, 0, 0, 0.2);
+  --aqua-button-hover-background: linear-gradient(to top, #fdfdfd 0%, #ffffff 100%);
+  --aqua-button-active-background: linear-gradient(#cfcfcf, #cfcfcf);
+  --aqua-button-active-border-color: #c6bfb9;
+  --aqua-button-active-border-accent-color: #bab3ab;
+  --aqua-button-active-box-shadow: 0 1px rgba(255, 255, 255, 0) inset;
+  --aqua-button-disabled-background: #faf9f8;
+  --aqua-button-disabled-border-color: #cdc7c2;
+  --aqua-button-disabled-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+  --aqua-inactive-button-background: linear-gradient(#f6f5f4, #f6f5f4);
+  --aqua-inactive-button-border-color: #c0c0bd;
+  --aqua-inactive-button-box-shadow: 0 1px rgba(255, 255, 255, 0) inset, 0 1px rgba(255, 255, 255, 0);
+  --aqua-button-suggested-action-background: linear-gradient(to top, #2379e2 2px, #3584e4);
+  --aqua-button-suggested-action-border-color: #1b6acb;
+  --aqua-button-suggested-action-border-accent-color: #15539e;
+  --aqua-button-suggested-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+  --aqua-button-suggested-action-hover-background: linear-gradient(to top, #3584e4, #3987e5 1px);
+  --aqua-button-suggested-action-active-background: #1961b9;
+  --aqua-button-suggested-action-active-border-color: #1b6acb;
+  --aqua-button-suggested-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+  --aqua-button-destructive-action-background: linear-gradient(to top, #ce1921 2px, #e01b24);
+  --aqua-button-destructive-action-border-color: #b2161d;
+  --aqua-button-destructive-action-border-accent-color: #851015;
+  --aqua-button-destructive-action-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0 1px 2px rgba(0, 0, 0, 0.07);
+  --aqua-button-destructive-action-hover-background: linear-gradient(to top, #e01b24, #e41c26 1px);
+  --aqua-button-destructive-action-active-background: #a0131a;
+  --aqua-button-destructive-action-active-border-color: #b2161d;
+  --aqua-button-destructive-action-active-box-shadow: inset 0 1px rgba(255, 255, 255, 0);
+
+  /* URL bar */
+  --aqua-urlbar-background: linear-gradient(#fff, #fff);
+  --aqua-urlbar-border-color: #b6b6b3;
+  --aqua-urlbar-box-shadow: none;
+  --aqua-urlbar-color: #020202;
+  --aqua-inactive-urlbar-background: linear-gradient(#fcfcfc, #fcfcfc);
+  --aqua-inactive-urlbar-border-color: #c0c0bd;
+  --aqua-inactive-urlbar-box-shadow: none;
+  --aqua-inactive-urlbar-color: #323232;
+  --aqua-focused-urlbar-border-color: #4a90d9;
+  --aqua-private-urlbar-background: #e6c2ff;
+
+  /* tab bar */
+  --aqua-tab-border-color: #c0c0c0;
+  --aqua-tab-separator-color: #d7d7d7;
+  --aqua-tab-background: #cccccc;
+  --aqua-tab-color: rgb(141, 144, 145);
+  --aqua-tab-hover-background: #d5d5d5;
+  --aqua-tab-hover-border-bottom-color: #b6b6b3;
+  --aqua-tab-hover-color: rgb(93, 98, 99);
+  --aqua-tab-active-background: #e5e5e5;
+  --aqua-tab-active-color: rgb(46, 52, 54);
+  --aqua-tab-active-hover-background: #e6e6e6;
+  --aqua-inactive-tab-color: #8b8e8f;
+  --aqua-inactive-tab-active-background: #e5e5e5;
+  --aqua-inactive-tab-active-color: var(--aqua-inactive-tab-color);
+  --aqua-tab-close-icon: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgd2lkdGg9IjE2IgogICB2ZXJzaW9uPSIxLjEiCiAgIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXciCiAgIGlkPSJzdmc3Mzg0IgogICBoZWlnaHQ9IjE2Ij4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE5MCI+CiAgICA8cmRmOlJERj4KICAgICAgPGNjOldvcmsKICAgICAgICAgcmRmOmFib3V0PSIiPgogICAgICAgIDxkYzpmb3JtYXQ+aW1hZ2Uvc3ZnK3htbDwvZGM6Zm9ybWF0PgogICAgICAgIDxkYzp0eXBlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vcHVybC5vcmcvZGMvZGNtaXR5cGUvU3RpbGxJbWFnZSIgLz4KICAgICAgICA8ZGM6dGl0bGU+R25vbWUgU3ltYm9saWMgSWNvbnM8L2RjOnRpdGxlPgogICAgICAgIDxjYzpsaWNlbnNlCiAgICAgICAgICAgcmRmOnJlc291cmNlPSJodHRwOi8vY3JlYXRpdmVjb21tb25zLm9yZy9saWNlbnNlcy9ieS1zYS80LjAvIiAvPgogICAgICA8L2NjOldvcms+CiAgICAgIDxjYzpMaWNlbnNlCiAgICAgICAgIHJkZjphYm91dD0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnktc2EvNC4wLyI+CiAgICAgICAgPGNjOnBlcm1pdHMKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zI1JlcHJvZHVjdGlvbiIgLz4KICAgICAgICA8Y2M6cGVybWl0cwogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjRGlzdHJpYnV0aW9uIiAvPgogICAgICAgIDxjYzpyZXF1aXJlcwogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjTm90aWNlIiAvPgogICAgICAgIDxjYzpyZXF1aXJlcwogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjQXR0cmlidXRpb24iIC8+CiAgICAgICAgPGNjOnBlcm1pdHMKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zI0Rlcml2YXRpdmVXb3JrcyIgLz4KICAgICAgICA8Y2M6cmVxdWlyZXMKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zI1NoYXJlQWxpa2UiIC8+CiAgICAgIDwvY2M6TGljZW5zZT4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTg0NzMiPkdub21lIFN5bWJvbGljIEljb25zPC90aXRsZT4KICA8ZGVmcwogICAgIGlkPSJkZWZzNzM4NiIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyMSIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyNyIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyNiIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyNSIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyOSIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyMiIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyOCIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyMyIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTg4OCkiCiAgICAgaWQ9ImxheWVyNCIgLz4KICA8ZwogICAgIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMi4wMDU4NTMsLTk1MikiCiAgICAgaWQ9ImxheWVyMTAiPgogICAgPHBhdGgKICAgICAgIGQ9Im0gMTYuMDA1ODUzLDk1NiBoIDEgYyAwLjAxMDM3LC0xLjJlLTQgMC4wMjA3OSwtNC42ZS00IDAuMDMxMjUsMCAwLjI1NDk1MSwwLjAxMTIgMC41MDk4NywwLjEyODU4IDAuNjg3NSwwLjMxMjUgbCAyLjI4MTI1LDIuMjgxMjUgMi4zMTI1LC0yLjI4MTI1IGMgMC4yNjU2MjUsLTAuMjMwNSAwLjQ0NjY3MiwtMC4zMDU1IDAuNjg3NSwtMC4zMTI1IGggMSB2IDEgYyAwLDAuMjg2NDcgLTAuMDM0MzQsMC41NTA2NSAtMC4yNSwwLjc1IGwgLTIuMjgxMjUsMi4yODEyNSAyLjI1LDIuMjUgYyAwLjE4ODE4OCwwLjE4ODE3IDAuMjgxMjQyLDAuNDUzNDUgMC4yODEyNSwwLjcxODc1IHYgMSBoIC0xIGMgLTAuMjY1MzAxLC0xMGUtNiAtMC41MzA1ODYsLTAuMDkzMSAtMC43MTg3NSwtMC4yODEyNSBsIC0yLjI4MTI1LC0yLjI4MTI1IC0yLjI4MTI1LDIuMjgxMjUgQyAxNy41MzY0MzksOTYzLjkwNjk0IDE3LjI3MTE0Myw5NjQgMTcuMDA1ODUzLDk2NCBoIC0xIHYgLTEgYyAtM2UtNiwtMC4yNjUyOSAwLjA5MzA2LC0wLjUzMDU4IDAuMjgxMjUsLTAuNzE4NzUgbCAyLjI4MTI1LC0yLjI1IC0yLjI4MTI1LC0yLjI4MTI1IGMgLTAuMjEwNzQyLC0wLjE5NDYzIC0wLjMwMzE2LC0wLjQ2OTI1IC0wLjI4MTI1LC0wLjc1IHoiCiAgICAgICBpZD0icGF0aDEwODM5LTkiCiAgICAgICBzdHlsZT0iY29sb3I6I2JlYmViZTtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZTptZWRpdW07bGluZS1oZWlnaHQ6bm9ybWFsO2ZvbnQtZmFtaWx5OidBbmRhbGUgTW9ubyc7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQW5kYWxlIE1vbm8nO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOm5vcm1hbDt3b3JkLXNwYWNpbmc6bm9ybWFsO3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMmUzNDM2O2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDoxLjc4MTI0OTg4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOm5ldyIgLz4KICA8L2c+Cjwvc3ZnPgo=");
+
+  /*
+   * Dirty hacks for replaced symbolic icons
+   *
+   * Icons are loaded from `/usr/share/icons/<theme>` and for some themes need
+   * to be inverted or otherwise adjusted. Use the filters below to your
+   * needs (you may also adjust icon brightness here).
+   */
+  --aqua-convert-icon-to-symbolic-hack-filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%) brightness(85%) invert(100%);
+  --aqua-icons-hack-filter: none;
+  --aqua-window-icons-hack-filter: invert(30%);
+}

@@ -1,0 +1,69 @@
+/*
+ * aqua-firefox-theme
+ * aqua-theme.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@import "components/buttons.css";
+@import "components/csd.css";
+@import "components/custom-icons.css";
+@import "components/entries.css";
+@import "components/findbar.css";
+@import "components/headerbar.css";
+@import "components/popups.css";
+@import "components/scrollbars.css";
+@import "components/subdue-tab-transition.css";
+@import "components/tab-bar.css";
+@import "components/toolbox.css";
+
+@import "variants/light.css";
+@import "variants/dark.css";
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+:root {
+  --space-above-tabbar: 0 !important;
+}
+
+/* sidebar */
+
+#sidebar-box,
+.sidebar-panel {
+  background: var(--aqua-sidebar-background) !important;
+}
+
+#sidebar-box:-moz-window-inactive,
+.sidebar-panel:-moz-window-inactive {
+  background: var(--aqua-inactive-sidebar-background) !important;
+}
+
+#sidebar-box:-moz-window-inactive label,
+#sidebar-box:-moz-window-inactive image,
+.sidebar-panel:-moz-window-inactive label,
+.sidebar-panel:-moz-window-inactive image,
+.sidebar-placesTreechildren:-moz-window-inactive {
+  opacity: 0.7 !important;
+}
+
+#sidebar-splitter {
+  background: var(--aqua-toolbar-border-color) !important;
+  border: 0 !important;
+  width: 1px !important;
+}
+
+#sidebar-splitter:-moz-window-inactive {
+  background: var(--aqua-inactive-toolbar-border-color) !important;
+}
+
+#sidebar-header {
+  padding: 6px !important;
+  border-bottom: 1px solid var(--aqua-toolbar-border-color) !important;
+}
+
+#sidebar-search-container {
+  padding: 6px !important;
+}

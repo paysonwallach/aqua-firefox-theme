@@ -1,0 +1,21 @@
+/*
+ * aqua-firefox-theme
+ * subdue-tab-transition.css
+ *
+ * subdues the white flash transition that occurs before opening or after
+ * closing a tab.
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* overrides: change the flash color */
+#tabbrowser-tabpanels,
+#tabbrowser-tabpanels[pendingpaint],
+browser {
+  background-color: var(--aqua-browser-before-load-background) !important;
+}
