@@ -1,8 +1,15 @@
-/* Private window headerbar */
+/*
+ * aqua-firefox-theme
+ * omnibar-private.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
 
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
-/*  */
 :root[privatebrowsingmode="temporary"] #nav-bar toolbarspring:first-of-type:before {
   background: url("../icons/user-not-tracked.svg") no-repeat;
   background-size: contain;
@@ -26,7 +33,6 @@
   overflow: hidden;
 }
 
-/* */
 #TabsToolbar .private-browsing-indicator {
   display: none !important;
 }
