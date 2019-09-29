@@ -1,14 +1,24 @@
-/* Header bar */
-@import "headerbar-urlbar.css";
-@import "headerbar-private-urlbar.css";
+/*
+ * aqua-firefox-theme
+ * headerbar.css
+ *
+ * Copyright (c) 2019 Payson Wallach
+ *
+ * Released under the terms of the GNU General Public License, version 3
+ * (https://gnu.org/licenses/gpl.html)
+ */
+
+@import "omnibar.css";
+@import "private-omnibar.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
-/* Headerbar */
+/* headerbar */
 #nav-bar {
   padding: 5px 4px !important;
 }
 
-/* Headerbar CSD colors */
+/* headerbar CSD colors */
+
 :root[tabsintitlebar] #nav-bar {
   background: var(--aqua-headerbar-background) !important;
   border: none !important;
