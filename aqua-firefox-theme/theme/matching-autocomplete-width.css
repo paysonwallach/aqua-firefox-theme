@@ -59,6 +59,7 @@
 #urlbar-results .search-panel-one-offs {
   --item-padding-start: 0 !important;
   --item-padding-end: 0 !important;
+  margin-bottom: -4px !important;
 }
 
 /* search engines buttons */
