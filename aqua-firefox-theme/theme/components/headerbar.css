@@ -9,7 +9,7 @@
  */
 
 @import "omnibar.css";
-@import "private-omnibar.css";
+@import "omnibar-private.css";
 @namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 
 /* headerbar */
