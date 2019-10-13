@@ -30,9 +30,9 @@
 :root[tabsintitlebar][inFullscreen] #window-controls {
   -moz-appearance: none !important;
   position: absolute !important;
-  top: -2px;
+  top: -6px;
   left: 0;
-  padding: 0 4px;
+  padding: 0 6px;
 }
 
 /* remove close and minimize buttons from fullscreen buttons */
