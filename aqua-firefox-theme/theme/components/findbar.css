@@ -40,7 +40,7 @@ findbar {
   animation: 0.2s scale-in;
   transform-origin: top center;
   background: var(--toolbar-bgcolor) !important;
-  padding: 4px 6px 6px 10px;
+  padding: 4px 6px 4px 10px;
   border: 1px solid var(--toolbox-border-bottom-color);
   border-top-width: 0;
   border-radius: 0 0 var(--toolbarbutton-border-radius) var(--toolbarbutton-border-radius);
@@ -54,7 +54,7 @@ findbar[hidden="true"] {
 
 findbar .findbar-container {
   position: relative;
-  top: 6px;
+  top: 4px;
   padding: 0 !important;
   padding-inline-start: 0 !important;
   padding-inline-end: 0 !important;
@@ -97,6 +97,11 @@ findbar .findbar-closebutton {
   margin-right: 4px !important;
   padding-inline-end: 0 !important;
   position: relative;
+}
+
+findbar .findbar-find-fast {
+  position: relative;
+  top: -4px !important;
 }
 
 window[lwtheme="true"] findbar {
