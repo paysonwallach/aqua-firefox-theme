@@ -4,7 +4,7 @@
     <img src=https://img.shields.io/github/v/release/paysonwallach/aqua-firefox-theme?style=flat-square>
   </a>
   <a href=https://github.com/paysonwallach/aqua-firefox-theme/blob/master/LICENSE>
-    <img src=https://img.shields.io/github/license/paysonwallach/aqua-firefox-theme?style=flat-square>
+    <img src=https://img.shields.io/badge/license-HIP-994444?style=flat-square>
   </a>
   <a href=https://buymeacoffee.com/paysonwallach>
     <img src=https://img.shields.io/badge/donate-Buy%20me%20a%20coffee-yellow?style=flat-square>
