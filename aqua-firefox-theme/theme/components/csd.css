@@ -30,7 +30,7 @@
 :root[tabsintitlebar][inFullscreen] #window-controls {
   -moz-appearance: none !important;
   position: absolute !important;
-  top: -6px;
+  top: -3px;
   left: 0;
   padding: 0 6px;
 }
