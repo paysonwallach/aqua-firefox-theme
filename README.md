@@ -26,5 +26,9 @@
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
+## Code of Conduct
+
+By participating in this project, you agree to abide by the terms of the [Code of Conduct](https://github.com/paysonwallach/venn/blob/master/CODE_OF_CONDUCT.md).
+
 ## License
 [aqua-firefox-theme](https://github.com/paysonwallach/aqua-firefox-theme) is licensed under the [GNU Public License v3](https://github.com/paysonwallach/aqua-firefox-theme/blob/master/LICENSE).
