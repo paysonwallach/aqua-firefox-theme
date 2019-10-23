@@ -99,11 +99,6 @@ findbar .findbar-closebutton {
   position: relative;
 }
 
-findbar .findbar-find-fast {
-  position: relative;
-  top: -4px !important;
-}
-
 window[lwtheme="true"] findbar {
   background: var(--lwt-header-image) !important;
   background-attachment: fixed !important;
@@ -128,4 +123,9 @@ window[lwtheme="true"] findbar .findbar-button[checked="true"] {
 window[lwtheme="true"] findbar .findbar-find-status,
 window[lwtheme="true"] findbar .found-matches {
   color: var(--lwt-text-color) !important;
+}
+
+findbar .findbar-find-fast {
+  position: relative;
+  top: -4px !important;
 }

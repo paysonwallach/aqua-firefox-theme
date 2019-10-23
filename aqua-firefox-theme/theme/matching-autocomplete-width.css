@@ -11,52 +11,38 @@
 @namespace xul url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 
 /* set popover size and position */
-#urlbar-results {
+.urlbarView {
   --box-width: calc(100vw - var(--item-padding-start) - var(--item-padding-end) + 8px);
   --fixed-widths: calc((6px + 16px + 6px) + (16px + 9px) + 11px);
-  border-radius: 9px;
+  left: calc(var(--item-padding-start) - 8px) !important;
+  border-radius: 7px !important;
   margin-left: 0 !important;
   margin-top: 0 !important;
   max-width: var(--box-width) !important;
 }
 
-/* style as regular popover */
-#urlbar-results {
-  background: var(--aqua-popover-background) !important;
-  border: 1px solid !important;
-  border-color: var(--aqua-popover-border-color) !important;
-  border-radius: 9px;
-  box-shadow: var(--aqua-popover-shadow) !important;
-  /* BUG: not showing any shadow at all */
-  color: var(--aqua-toolbar-color) !important;
-  padding: 8px;
-}
-
 /* results box */
-#urlbar-results .urlbarView-body-inner {
-  max-width: calc(var(--box-width) - 18px) !important;
+.urlbarView-body-inner {
+  max-width: var(--box-width) !important;
 }
 
-#urlbarView-results {
+.urlbarView-row {
   --item-padding-start: 0 !important;
   --item-padding-end: 0 !important;
   max-height: 35vh !important;
   overflow-x: auto;
+  border-radius: 5px !important;
 }
 
 /* search panel  */
 
-#urlbar-results .search-panel-one-offs-header,
-#urlbar-results .search-panel-one-offs {
+.search-panel-one-offs-header,
+.search-panel-one-offs {
   background: transparent !important;
   border: 0 !important;
 }
 
-#urlbar-results .search-panel-one-offs-header {
-  border-top: 1px solid var(--aqua-popover-separator-color) !important;
-}
-
-#urlbar-results .search-panel-one-offs {
+.search-panel-one-offs {
   --item-padding-start: 0 !important;
   --item-padding-end: 0 !important;
   margin-bottom: -4px !important;
@@ -64,12 +50,13 @@
 
 /* search engines buttons */
 
-#urlbar-results .searchbar-engine-one-off-item:not(.dummy) {
+.searchbar-engine-one-off-item:not(.dummy) {
   -moz-appearance: none !important;
   --toolbarbutton-active-background: transparent !important;
   --toolbarbutton-hover-background: transparent !important;
   background: var(--aqua-button-background) !important;
   box-shadow: var(--aqua-button-box-shadow);
+  border-radius: 5px;
   border-width: 1px 1px 1px 0;
   border-style: solid;
   border-color: var(--aqua-button-border-color) !important;
@@ -80,27 +67,10 @@
   box-sizing: border-box !important;
 }
 
-#urlbar-results .searchbar-engine-one-off-item:hover,
-#urlbar-results .searchbar-engine-one-off-item[selected] {
+.searchbar-engine-one-off-item:hover,
+.searchbar-engine-one-off-item[selected] {
   background: var(--aqua-button-hover-background) !important;
   color: unset !important;
-}
-
-#urlbar-results .searchbar-engine-one-off-item:first-child {
-  border-radius: 5px 0 0 5px;
-  border-left-width: 1px !important;
-}
-
-#urlbar-results .searchbar-engine-one-off-item.last-engine {
-  border-radius: 0 5px 5px 0;
-}
-
-#urlbar-results .searchbar-engine-one-off-item.dummy {
-  display: none !important;
-}
-
-#urlbar-results .searchbar-engine-one-off-item:not(.last-row) {
-  box-sizing: border-box !important;
 }
 
 #urlbar-anon-search-settings-compact {
@@ -110,8 +80,8 @@
   margin-left: 6px !important;
 }
 
-/* convert search engines icons to symbolic */
-#urlbar-results .searchbar-engine-one-off-item:not(.search-setting-button-compact) .button-icon {
+/* convert search engines icons to symbolic
+.searchbar-engine-one-off-item:not(.search-setting-button-compact) .button-icon {
   filter: var(--aqua-convert-icon-to-symbolic-hack-filter);
 }
 

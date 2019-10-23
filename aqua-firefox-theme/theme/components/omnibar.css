@@ -17,6 +17,10 @@ toolbarspring {
 
 /* urlbar and searchbar */
 
+#urlbar-container {
+  padding: 0 !important;
+}
+
 #urlbar[focused] .urlbar-textbox-container {
   margin: -1px !important;
 }
@@ -41,4 +45,10 @@ toolbarspring {
 .searchbar-search-button:hover:active .searchbar-search-icon {
   background-color: transparent !important;
   fill-opacity: 1 !important;
+}
+
+#pageAction-urlbar-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_ {
+  width: 20px !important;
+  height: 20px !important;
+  margin-right: 4px;
 }
