@@ -36,6 +36,10 @@
 
 /* search panel  */
 
+.search-one-offs {
+  padding: 1em !important;
+}
+
 .search-panel-one-offs-header,
 .search-panel-one-offs {
   background: transparent !important;
