@@ -35,6 +35,11 @@
   padding: 0 6px;
 }
 
+/* FF 71+ */
+:root[tabsintitlebar] #titlebar .titlebar-buttonbox-container {
+  display: block;
+}
+
 /* remove close and minimize buttons from fullscreen buttons */
 :root[tabsintitlebar][inFullscreen] #window-controls #close-button,
 :root[tabsintitlebar][inFullscreen] #window-controls #minimize-button {
