@@ -41,6 +41,11 @@ panel[type=arrow] {
 
 /* style popovers */
 
+/* FF 71+ fix */
+panel {
+  border-radius: 5px;
+}
+
 .panel-arrowcontent .panel-arrowcontent,
 .panel-header,
 .PanelUI-subView,
